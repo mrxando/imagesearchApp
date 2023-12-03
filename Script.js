@@ -26,8 +26,11 @@ async function searchImages(){
             imageLink.appendChild(image)
             searchResult.appendChild(imageLink)
         })
+        
     })
-    showMoreBtn.style.display = 'block'
+    if(searchResult.children.length > 11){
+        showMoreBtn.style.display = 'block'
+    }
 }
 
 searchForm.addEventListener('submit', (e)=> {
